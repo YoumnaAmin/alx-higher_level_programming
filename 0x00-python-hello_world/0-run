@@ -1,2 +1,2 @@
 #!/bin/bash
-pyhton3.4 $PYFILE
+pyhton3.12 $PYFILE
