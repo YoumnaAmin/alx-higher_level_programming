@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def magic_calculation(a, b):
-    result = (b ** a) + 98
+    result = (98 ** a) + b
     return result
