@@ -2,6 +2,7 @@
 def best_score(a_dictionary):
     if not(a_dictionary):
         return None
-    for i in sorted(a_dictionary):
-        max = i
-    return max
+    else:
+        for i in sorted(a_dictionary):
+            max = i
+        return max
