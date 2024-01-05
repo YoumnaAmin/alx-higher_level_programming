@@ -53,8 +53,10 @@ class Rectangle:
         char = ""
         if self.width == 0 or self.height == 0:
             return (char)
-        for i in range(self.height):
-            for i in range(self.width):
-                char += '#'
-            char += '\n'
+        else:
+            for i in range(self.height):
+                for j in range(self.width):
+                    char += '#'
+                if i != self.height - 1:
+                    char += '\n'
         return char
