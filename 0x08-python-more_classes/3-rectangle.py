@@ -49,6 +49,7 @@ class Rectangle:
             return (2 * self.__width) + (2 * self.__height)
 
     def __str__(self):
+        """to print in str format"""
         char = ""
         if self.width == 0 or self.height == 0:
             return (char)
