@@ -6,7 +6,7 @@ class Rectangle:
     """Rectangle dimensions"""
 
     number_of_instances = 0
-    
+
     def __init__(self, width=0, height=0):
         """Class constructor"""
         self.width = width
