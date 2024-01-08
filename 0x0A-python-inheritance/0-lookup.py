@@ -2,7 +2,6 @@
 """Returns a list of available attributes"""
 
 
-def lookup(obj):
+def lookup(obji):
     """Returns a list of available attributes"""
-
-    return(dir(obj))
+    return(dir(obji))
