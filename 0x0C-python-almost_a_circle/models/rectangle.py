@@ -98,6 +98,7 @@ class Rectangle(Base):
                .format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args):
+        """to update the values"""
         if len(args) == 5:
             self.id, self.width, self.height, self.x, self.y = args[:]
         elif len(args) == 4:
