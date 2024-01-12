@@ -97,15 +97,27 @@ class Rectangle(Base):
         return('[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}'
                .format(self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """to update the values"""
-        if len(args) == 5:
-            self.id, self.width, self.height, self.x, self.y = args[:]
-        elif len(args) == 4:
-            self.id, self.width, self.height, self.x = args[:4]
-        elif len(args) == 3:
-            self.id, self.width, self.height = args[:3]
-        elif len(args) == 2:
-            self.id, self.width = args[:2]
-        elif len(args) == 1:
-            self.id = args[0]
+        if args:
+            if len(args) == 5:
+                self.id, self.width, self.height, self.x, self.y = args[:]
+            elif len(args) == 4:
+                self.id, self.width, self.height, self.x = args[:4]
+            elif len(args) == 3:
+                self.id, self.width, self.height = args[:3]
+            elif len(args) == 2:
+                self.id, self.width = args[:2]
+            elif len(args) == 1:
+                self.id = args[0]
+        else:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'width' in kwargs:
+                self.width = kwargs['width']
+            if 'height' in kwargs:
+                self.height = kwargs['height']
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']
