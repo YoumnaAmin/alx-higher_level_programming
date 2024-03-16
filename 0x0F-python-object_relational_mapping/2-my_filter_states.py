@@ -18,7 +18,7 @@ if __name__ == "__main__":
     states = cursor.fetchall()
 
     for state in states:
-        if state[1] == search:
+        if state[1].lower() == search.lower():
             print("({}, {})".format(state[0], state[1]))
 
     cursor.close()
