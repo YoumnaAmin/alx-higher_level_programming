@@ -12,7 +12,8 @@ if __name__ == "__main__":
                          user=username, passwd=password,
                          db=database_name)
     cursor = db.cursor()
-    cursor.execute("SELECT DISTINCT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;")
+    cursor.execute("SELECT DISTINCT * FROM states WHERE name \
+                   LIKE 'N%' ORDER BY id ASC;")
     states = cursor.fetchall()
 
     for state in states:
