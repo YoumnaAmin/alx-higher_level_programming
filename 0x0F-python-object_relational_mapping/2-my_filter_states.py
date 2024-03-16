@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     for state in states:
         if state[1] == search:
-            print(f"({state[0]}, {state[1]})")
+            print("({}, {})".format(state[0], state[1]))
 
     cursor.close()
     db.close()
