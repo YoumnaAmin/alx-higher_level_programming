@@ -14,11 +14,10 @@ if __name__ == "__main__":
                          user=username, passwd=password,
                          db=database_name)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDER BY id ASC;")
+    cursor.execute("SELECT id, name FROM states WHERE name = %s ORDER BY id ASC;", (search,))
     states = cursor.fetchall()
 
     for state in states:
-        if state[1].lower() == search.lower():
             print("({}, {})".format(state[0], state[1]))
 
     cursor.close()
