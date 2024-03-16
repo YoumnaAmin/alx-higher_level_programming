@@ -14,7 +14,7 @@ if __name__ == "__main__":
                          user=username, passwd=password,
                          db=database_name)
     cursor = db.cursor()
-    cursor.execute("SELECT id, name FROM states WHERE\
+    cursor.execute("SELECT id, name FROM states WHERE BINARY\
                     name = %s ORDER BY id ASC;", (search,))
     states = cursor.fetchall()
 
