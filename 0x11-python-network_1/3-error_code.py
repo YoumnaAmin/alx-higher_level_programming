@@ -4,6 +4,7 @@
 
 if __name__ == "__main__":
     import urllib.request
+    from urllib.error import HTTPError
     import sys
     try:
         with urllib.request.urlopen(sys.argv[1]) as response:
