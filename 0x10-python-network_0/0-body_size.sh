@@ -1,4 +1,3 @@
 #!/bin/bash
-#to take url and then GET it
-URL=$1
-curl -sI $URL | awk '/Content-Length/ {print $2}'
+#cURL body size
+curl -sI "$1" | grep "Content-Length:" | cut -d' ' -f2
