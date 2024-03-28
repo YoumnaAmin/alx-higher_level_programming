@@ -5,6 +5,9 @@
 if __name__ == "__main__":
     import requests
     import sys
-    r = requests.get(sys.argv[1])
-    ID = r.headers['X-Request-Id']
-    print(ID)
+    try:
+        r = requests.get(sys.argv[1])
+        ID = r.headers['X-Request-Id']
+        print(ID)
+    except:
+        pass
