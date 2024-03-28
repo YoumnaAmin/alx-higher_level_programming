@@ -3,5 +3,5 @@
 if [ $# -eq 1 ];
 then
 URL=$1
-curl -s -o /dev/null -w "%{size_download}\n" $URL
+curl -sI $URL | awk '/Content-Length/ {print $2}'
 fi
