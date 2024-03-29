@@ -13,8 +13,8 @@ if __name__ == "__main__":
     try:
         data = r.json()
         if data:
-            print("[<{}>] <{}>".format(data.get('id'),
-                                       data.get('name')))
+            print("[{}] {}".format(data.get('id'),
+                                   data.get('name')))
         else:
             print("No result")
     except ValueError:
