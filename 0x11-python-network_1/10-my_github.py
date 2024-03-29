@@ -8,10 +8,8 @@ if __name__ == "__main__":
 
     username = sys.argv[1]
     password = sys.argv[2]
-    headers = {'Authorization':
-               'github_pat_11BBM752Y0gxnEiz1Diti5\
-                _qLpHn1SdtWkc591WajLWdYS3Z8lq8vkHLWW0h2ijeNt3RIHHR3PQ9462ypq'}
-    r = requests.get('https://api.github.com/YoumnaAmin', headers=headers)
+    auth = (username, password)
+    r = requests.get('https://api.github.com/user', auth=auth)
     data = r.json()
     if data:
         ID = data.get('id')
